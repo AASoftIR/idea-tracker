@@ -1,0 +1,112 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@font-face {
+	font-family: "std";
+	src: url("fonts/StencilStd.otf");
+}
+.caveat-font {
+	font-family: "Caveat", serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+
+.std-font {
+	font-family: "std";
+	font-weight: light;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "std", serif;
+}
+p,
+div,
+span {
+	font-family: "Caveat", "Roboto";
+	text-wrap: wrap;
+	font-size: large;
+}
+body {
+	perspective: 500px;
+}
+
+.text-stroke {
+	-webkit-text-stroke-color: azure;
+	-webkit-text-stroke-width: 1.5px;
+}
+
+@keyframes rotateAnimation {
+	0% {
+		transform: rotate3d(1, 1, 0, 0deg);
+		-webkit-transform: rotate3d(1, 1, 0, 0deg);
+		-moz-transform: rotate3d(1, 1, 0, 0deg);
+		-ms-transform: rotate3d(1, 1, 0, 0deg);
+		-o-transform: rotate3d(1, 1, 0, 0deg);
+	}
+	100% {
+		transform: rotate3d(1, 0, 1, 360deg);
+		-webkit-transform: rotate3d(1, 0, 1, 360deg);
+		-moz-transform: rotate3d(1, 0, 1, 360deg);
+		-ms-transform: rotate3d(1, 0, 1, 360deg);
+		-o-transform: rotate3d(1, 0, 1, 360deg);
+	}
+}
+.img-3d {
+	animation: rotateAnimation 5s infinite linear;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+	-webkit-animation: rotateAnimation 5s infinite linear;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {
+	background: #2c2c2c;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #555;
+	border-radius: 10px;
+	border: 3px solid #2c2c2c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #888;
+}
+
+/* Firefox scrollbar styles */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #555 #2c2c2c;
+	scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+	width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #2c2c2c;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #555;
+	border-radius: 10px;
+	border: 3px solid #2c2c2c;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background-color: #888;
+}
